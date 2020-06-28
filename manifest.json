@@ -1,0 +1,31 @@
+{
+    "name": "Restyle",
+    "version": "1.0",
+    "description": "Edit the CSS of a page to make it look better",
+    "permissions": [
+        "declarativeContent",
+        "storage",
+        "activeTab",
+        "storage"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "apply.js"
+            ]
+        }
+    ],
+    "page_action": {
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2
+}

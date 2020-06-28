@@ -1,0 +1,15 @@
+body{
+    min-width:300px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+select, input{
+    flex: 1;
+    margin-bottom: 10px;
+}
+
+textarea{
+    flex: 10;
+}
