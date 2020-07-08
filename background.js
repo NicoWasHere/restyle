@@ -7,17 +7,19 @@ chrome.runtime.onInstalled.addListener(() => {
         ],
         actions: [new chrome.declarativeContent.ShowPageAction()]
     }]);
-    //listens for init requests
-    chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-        if (request.task == "send css") {
-            sendResponse("soon")
-            sendCSS(request.host)
-        }
-        else {
-            sendResponse("no")
-        }
-    })
+
 });
+
+//listens for init requests
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.task == "send css") {
+        sendResponse("soon")
+        sendCSS(request.host)
+    }
+    else {
+        sendResponse("no")
+    }
+})
 
 //sends the selected css to the front ent
 const sendCSS = (host) => {
@@ -31,6 +33,7 @@ const sendCSS = (host) => {
         }
     })
 }
+
 
 
 

@@ -1,3 +1,6 @@
 Restyle
 =================================
 - style the popup so it looks cool
+- get it onto the chrome extension 
+- simplify handshakes
+- icons :O
